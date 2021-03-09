@@ -1,0 +1,26 @@
+.tarjetasUsuarios{
+  display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+    mat-card{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1fr;
+      align-items: center;
+      justify-items: center;
+      padding: 10px;
+      img{
+        width: 150px;
+        height: 150px;
+        border-radius: 100%;
+      }
+      &:hover{
+        background-color: rgb(208, 205, 255);
+      }
+    }
+  }
+
+  .mat-card-image{
+    margin: 0px !important;
+  }

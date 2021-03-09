@@ -1,0 +1,50 @@
+.main {
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - 60px);
+  z-index: 0;
+  .side {
+    padding: 12px;
+    background-color: #b1b1b1;
+  }
+  .data {
+    padding: 1.5em 1.8em;
+    background-color: #dcdcdc;
+    .description {
+      font-size: 14px;
+      padding-right: 1.2rem;
+    }
+    .infoIcon {
+      padding-right: 10px;
+    }
+  }
+  h2 {
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
+  }
+  h3 {
+    font-size: 1.6rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0px;
+    letter-spacing: 2px;
+  }
+}
+
+.ident-tab2 {
+  margin-left: 25px;
+}
+
+.image.profile {
+  width: 320px;
+  height: 320px;
+  border-radius: 100%;
+  box-shadow: 1px 2px 5px rgba($color: #000, $alpha: 0.4);
+}
+
+.actionList {
+  font-size: 2.5rem;
+  button {
+    padding: 0px 12px !important;
+  }
+}

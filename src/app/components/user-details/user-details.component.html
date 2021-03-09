@@ -1,0 +1,66 @@
+<div class="main" *ngIf="user">
+  <div class="side">
+    <img
+      class="image profile"
+      [src]="user.imageProfile"
+      alt="Imagen de perfil"
+    />
+    <div>
+      <!--Links del perfil -->
+      <mat-action-list class="actionList">
+        <button mat-list-item>Informacion personal</button>
+        <button mat-list-item>Lista de productos</button>
+        <button mat-list-item>Lista de transacciones</button>
+      </mat-action-list>
+    </div>
+  </div>
+  <div class="data">
+    <div>
+      <h2>{{ user.name }} {{ user.lastName }}</h2>
+      <p class="description">
+        {{ user.desc | ramdonLetter  }}
+      </p>
+    </div>
+    <mat-divider></mat-divider>
+    <div>
+      <h3>Informacion <button mat-icon-button><mat-icon>edit</mat-icon></button> </h3>
+      <mat-list>
+        <mat-list-item>
+          <mat-icon class="infoIcon">cake</mat-icon>{{ user.date | date }}</mat-list-item
+        >
+        <mat-list-item>
+          <mat-icon  class="infoIcon">public</mat-icon> {{ user.country }}</mat-list-item
+        >
+      </mat-list>
+    </div>
+    <mat-divider></mat-divider>
+    <div>
+      <h3>Direccion  <button mat-icon-button><mat-icon>edit</mat-icon></button> </h3>
+      <mat-list>
+        <mat-list-item>
+          <mat-icon  class="infoIcon">home</mat-icon> {{ user.address }}, {{ user.state }},
+          {{ user.zipCode }}
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon  class="infoIcon">email</mat-icon> {{ user.email }}</mat-list-item
+        >
+        <mat-list-item>
+          <mat-icon  class="infoIcon">phone</mat-icon> {{ user.phone }}</mat-list-item
+        >
+      </mat-list>
+    </div>
+    <mat-divider></mat-divider>
+    <div>
+      <h3>Trabajo actual  <button mat-icon-button><mat-icon>edit</mat-icon></button> </h3>
+      <mat-list>
+        <mat-list-item
+          ><mat-icon  class="infoIcon">business_center</mat-icon>
+          {{ user.jobTitle }}</mat-list-item
+        >
+        <mat-list-item
+          ><mat-icon  class="infoIcon">domain</mat-icon> {{ user.company }}
+        </mat-list-item>
+      </mat-list>
+    </div>
+  </div>
+</div>
