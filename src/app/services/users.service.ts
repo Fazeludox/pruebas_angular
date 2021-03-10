@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { User } from '../interfaces/user';
 
@@ -16,9 +16,11 @@ export class UsersService {
     return this.http.get<User[]>(this.urlFake)
   }
 
-  getDetails(id: string): Observable<User> {
-    let fakeUser = this.urlFake+"/"+id;
-    return this.http.get<User>(fakeUser);
+  getUserData(id: string ): Observable<User> {
+      let fakeUser = this.urlFake+"/"+id;
+      return this.http.get<User>(fakeUser);
   }
+
+
 
 }

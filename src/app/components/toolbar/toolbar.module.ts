@@ -4,6 +4,7 @@ import { ToolbarComponent } from './toolbar.component';
 import { MatToolbarModule  } from '@angular/material/toolbar';
 import { MatIconModule  } from '@angular/material/icon'
 import { MatButtonModule } from '@angular/material/button';
+import { RouterModule } from '@angular/router';
 
 const material = [
 MatToolbarModule,
@@ -16,8 +17,9 @@ MatButtonModule
   declarations: [ToolbarComponent],
   imports: [
     CommonModule,
-    ...material
+    ...material,
+    RouterModule
   ],
-  exports: [ToolbarComponent]
+  exports: [ToolbarComponent, RouterModule]
 })
 export class ToolbarModule { }

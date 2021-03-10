@@ -1,0 +1,30 @@
+
+<h1>Estas en Transacciones</h1>
+
+<form [formGroup]="searchUser">
+
+<div>
+  <input  formControlName="name" type="text" (keyup)="menuSelect()"  matInput>
+  <button mat-flat-button color="primary" >Buscar</button>
+
+  <div *ngIf="nameMatch">
+    <mat-action-list>
+      <button mat-list-item *ngFor="let obj of nameMatch" (click)="selectUser(obj.id)"  >{{obj.name}}</button>
+    </mat-action-list>
+  </div>
+  <div>
+    <h2>Menu de prueba</h2>
+    <mat-action-list>
+      <button mat-list-item *ngFor="let test of usersTest" (click)="selectUser(test.id)"  >{{test.name}}</button>
+    </mat-action-list>
+  </div>
+  <div *ngIf="userTransactions">
+    <h2>Transacciones</h2>
+    <ul>
+      <li *ngFor="let transaction of userTransactions.transactions">{{transaction | json}}  </li>
+    </ul>
+  </div>
+</div>
+
+
+</form>

@@ -12,6 +12,7 @@ import { UserListModule } from './components/user-list/user-list.module';
 import { UserDetailsModule } from './components/user-details/user-details.module';
 import { ToolbarModule } from './components/toolbar/toolbar.module';
 import { PipesModule } from './module/pipes/pipes.module';
+import { UserTransactionModule } from './components/user-transaction/user-transaction.module';
 
 
 
@@ -27,7 +28,8 @@ import { PipesModule } from './module/pipes/pipes.module';
     UserListModule,
     UserDetailsModule,
     ToolbarModule,
-    PipesModule
+    PipesModule,
+    UserTransactionModule
   ],
   providers: [UsersService],
   bootstrap: [AppComponent]

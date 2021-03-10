@@ -16,5 +16,6 @@ export interface User {
   email: string,
   phone: string,
   vehicle: string,
-  imageProfile: string
+  imageProfile: string,
+  relTransaction: number
 }

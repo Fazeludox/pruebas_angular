@@ -14,13 +14,9 @@ export class UserListComponent implements OnInit {
 
   Users: User[]
 
-
-
   getUsers() {
     this.userService.getUsers().subscribe(data => {
       this.Users = data;
-      console.log("Problemas");
-
     }, err => console.error(err)
     )
   }

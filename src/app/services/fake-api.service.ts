@@ -27,17 +27,37 @@ export class FakeApiService implements InMemoryDbService {
       phone: faker.phone.phoneNumber(),
       vehicle: faker.vehicle.vehicle(),
       imageProfile: faker.image.people(),
+      relTransaction: faker.random.number()
     }
   }
 
+  anotherHost() {
+    return {
+
+      accountName: faker.finance.accountName(),
+      account: faker.finance.account(),
+      amount: faker.finance.amount(),
+      transactionType: faker.finance.transactionType(),
+      dateTransaction: faker.date.past(),
+
+
+    }
+  }
   createDb() {
 
     const fakeMock = [];
-
-    for (let i = 0; i < 100; i++) {
-      fakeMock.push(this.oneHost())
+    const fakeMock2 = [];
+    let transactions = []
+    for (let i = 0; i < 50; i++) {
+      transactions = [];
+      fakeMock.push(this.oneHost());
+      for (let a = 0; a < 10; a++) {
+        transactions.push(this.anotherHost());
+      }
+      fakeMock2.push({ id: fakeMock[i].relTransaction, transactions: transactions });
     }
-    return { fakeMock };
+
+    return { fakeMock, fakeMock2 };
   }
 
 
